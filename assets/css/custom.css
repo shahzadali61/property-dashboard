@@ -1,0 +1,91 @@
+.layout-wrapper:not(.layout-horizontal) .menu-vertical .menu-sub > .menu-item > .menu-link::before {
+
+    border: none !important;
+  }
+  .layout-wrapper{
+    background-color: rgb(242, 245, 252) !important;
+}
+.navbar  {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: white ;
+}
+.sidebar{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: white !important;
+}
+.layout-navbar{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: white ;
+    margin-bottom: 10px;
+    padding: 20px !important;
+}
+.content-container{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: white ;
+
+}
+.layout-navbar.navbar-detached {
+    transition: padding 0.2sease, background-color 0.18sease;
+    padding: 0;
+    width: calc(100% - 1.5rem* 2);
+   border-radius: 2px !important;
+}
+.btn-primary {
+    background-color: rgb(255, 94, 0);
+    border-color: rgb(255, 94, 0);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited {
+    background-color: rgb(248, 113, 34) !important;
+    border-color: rgb(248, 113, 34) !important;
+    box-shadow: none !important; /* Removes any Bootstrap hover/focus effects */
+}
+.text-primary{
+    color: rgb(255, 94, 0) !important;
+
+}
+.form-control:focus, .form-select:focus
+.navbar{
+    border-color: rgb(255, 94, 0) !important;
+
+}
+.input-group:not(.input-group-floating):focus-within .input-group-text {
+    border-color: rgb(255, 94, 0) !important;
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+@media only screen and (max-width: 991px) {
+    .content-container{
+        margin-top: 100px !important;
+    }
+    .navbar .navbar-search{
+        width: 70%;
+
+    }
+    .navbar .user-dropdown{
+        width: 150px;
+
+    }
+    .navbar .logout{
+        width: 150px;
+        text-align: center;
+
+    }
+    .navbar{
+        position: fixed;
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 576px) {
+
+}
+
