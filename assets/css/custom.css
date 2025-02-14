@@ -58,6 +58,24 @@
 a{
     color: #ff5f00;
 }
+.container-xxl{
+    max-width: 1500px;
+}
+
+/* .bg-menu-theme .menu-item.active > .menu-link:not(.menu-toggle){
+    background-color: rgb(255, 94, 0) !important;
+    color: white;
+} */
+.menu-vertical .menu-inner .menu-item.active > .menu-link:not(.menu-toggle){
+    box-shadow: none !important;
+}
+.bg-menu-theme .menu-item.active > .menu-link:not(.menu-toggle) {
+    background: none ;
+}
+.bg-menu-theme .menu-item.active:not(.open) > .menu-link:not(.menu-toggle){
+    color: #ff5f00 !important;
+
+}
 
 @media only screen and (max-width: 1200px) {
 
