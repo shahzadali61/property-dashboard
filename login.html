@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr"
+    data-theme="theme-default" data-assets-path="admin/assets/"
+    data-template="vertical-menu-template-free"
+    data-style="light">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+        <title>Property</title>
+
+        <meta name="description" content />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon"
+            href="assets/img/favicon/favicon.ico" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
+            rel="stylesheet" />
+
+        <link rel="stylesheet"
+            href="assets/vendor/fonts/remixicon/remixicon.css" />
+
+        <!-- Menu waves for no-customizer fix -->
+        <link rel="stylesheet"
+            href="assets/vendor/libs/node-waves/node-waves.css" />
+
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="assets/vendor/css/core.css"
+            class="template-customizer-core-css" />
+        <link rel="stylesheet" href="assets/vendor/css/theme-default.css"
+            class="template-customizer-theme-css" />
+        <link rel="stylesheet" href="assets/css/demo.css" />
+
+        <!-- Vendors CSS -->
+        <link rel="stylesheet"
+            href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+        <link rel="stylesheet"
+            href="assets/vendor/libs/apex-charts/apex-charts.css" />
+        <link rel="stylesheet" href="assets/css/auth.css" />
+
+        <link rel="stylesheet" href="assets/css/custom.css" />
+        <script src="assets/vendor/js/helpers.js"></script>
+
+        <script src="assets/js/config.js"></script>
+    </head>
+
+    <body style="background-color: rgb(255, 255, 255);">
+        <section class="auth ">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active" >
+                                <img class="d-block w-100 vh-100 carousel-img" src="assets/img/auth-img-1.jpg" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block text-start">
+                                    <h2 class="carousel-title">GoHome</h2>
+                                  <p class="carousel-content">Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p>
+                                  <a href="#" class="btn btn-primary ">Contact</a>
+                                </div>
+                              </div>
+                              <div class="carousel-item" >
+                                <img class="d-block w-100 vh-100" src="assets/img/auth-img-2.jpg" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block text-start">
+                                  <h2 class="carousel-title">GoHome</h2>
+                                  <p class="carousel-content">In numquam omittam sea.</p>
+                                  <a href="#" class="btn btn-primary ">Contact</a>
+                                </div>
+                              </div>
+                              <div class="carousel-item" >
+                                <img class="d-block w-100 vh-100" src="assets/img/auth-img-3.jpg" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block text-start">
+                                    <h2 class="carousel-title">GoHome</h2>
+                                  <p class="carousel-content">Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no.</p>
+                                  <a href="#" class="btn btn-primary ">Contact</a>
+                                </div>
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </a>
+                          </div>
+
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="row">
+                            <div class="col-12 mt-4 ms-5">
+                                <img class="img-fluid auth-img"
+                                    src="assets/img/sidebar.png" alt="not-show">
+                            </div>
+                            <div class="col-12 vh-100 d-flex justify-content-center align-items-center">
+                                <div class="auth-form-width">
+                                    <form action="">
+                                        <h2>Sigin</h2>
+                                            <p>Enter Username and Password to sign in.</p>
+                                        <label class="mb-0">Username</label>
+                                            <div class="input-group input-group-merge mb-6">
+                                                <span id="basic-icon-default-fullname2" class="input-group-text"><i class="ri-user-line ri-20px"></i></span>
+                                                  <input type="email" class="form-control" id="basic-icon-default-fullname" placeholder="Username" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
+                                            </div>
+                                        <label class="mb-0 mt-2">Password</label>
+                                            <div class="input-group input-group-merge mb-6">
+                                                <span id="basic-icon-default-fullname2" class="input-group-text"><i class="ri-lock-line"></i></span>
+                                                  <input type="password" class="form-control" id="basic-icon-default-fullname" placeholder="Enter password" aria-label="John Doe" aria-describedby="basic-icon-default-fullname2">
+                                            </div>
+                                            <div class="text-center mt-5">
+                                                <button type="submit" class="btn btn-primary w-100 py-4 my-4">Login</button>
+                                                <a href="forget-password.html" class="text-primary"  href="#">Forget Password</a>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+        <script src="assets/vendor/libs/jquery/jquery.js"></script>
+        <script src="assets/vendor/libs/popper/popper.js"></script>
+        <script src="assets/vendor/js/bootstrap.js"></script>
+        <script src="assets/vendor/libs/node-waves/node-waves.js"></script>
+        <script
+            src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="assets/vendor/js/menu.js"></script>
+        <!-- Vendors JS -->
+        <script src="assets/vendor/libs/apex-charts/apexcharts.js"></script>
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+        <!-- Page JS -->
+        <script src="assets/js/dashboards-analytics.js"></script>
+        <!-- Place this tag before closing body tag for GitHub widget button. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </body>
+
+</html>

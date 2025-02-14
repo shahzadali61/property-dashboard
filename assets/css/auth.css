@@ -1,0 +1,37 @@
+.auth{
+    background-color: rgb(255, 255, 255);
+    margin: 50px 0px;
+}
+.auth .auth-img{
+    width: 250px;
+
+}
+.auth label{
+    color: black;
+}
+.auth h3{
+    font-weight: 800;
+}
+.auth .auth-form-width{
+    width: 75%;
+}
+.auth .carousel-title
+{
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.auth .carousel-content
+{
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.auth .carousel-img{
+    border-radius: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .auth .auth-form-width{
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 576px) {
+
+}
