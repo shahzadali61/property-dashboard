@@ -55,6 +55,9 @@
 .input-group:not(.input-group-floating):focus-within .input-group-text {
     border-color: rgb(255, 94, 0) !important;
 }
+a{
+    color: #ff5f00;
+}
 
 @media only screen and (max-width: 1200px) {
 
