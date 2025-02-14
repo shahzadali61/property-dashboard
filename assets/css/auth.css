@@ -9,8 +9,9 @@
 .auth label{
     color: black;
 }
-.auth h3{
+.auth .auth-form-title{
     font-weight: 800;
+    margin-bottom: 40px;
 }
 .auth .auth-form-width{
     width: 60%;
