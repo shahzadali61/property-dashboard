@@ -30,6 +30,7 @@
     width: calc(100% - 1.5rem* 2);
    border-radius: 2px !important;
 }
+
 .btn-primary {
     background-color: rgb(255, 94, 0);
     border-color: rgb(255, 94, 0);
@@ -75,6 +76,45 @@ a{
 .bg-menu-theme .menu-item.active:not(.open) > .menu-link:not(.menu-toggle){
     color: #ff5f00 !important;
 
+}
+.card{
+    box-shadow: none;
+}
+.action-table{
+    width: 160px;
+}
+.phases-circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.horizone-line{
+    border-bottom: 1px solid #c9cbd1;
+    margin-bottom: 40px;
+}
+.input-group{
+     height: 40px !important;
+
+}
+.btn{
+    height: 45px;
+    font-size: 12px;
+    /* padding: 5px 13px; */
+}
+.form-control{
+    height: 45px;
+}
+.form-select{
+    height: 45px;
+}
+
+.table-header .table-header-search
+{
+    width: 220px;
+}
+.customize-table tbody tr{
+    height: 100px;
 }
 
 @media only screen and (max-width: 1200px) {

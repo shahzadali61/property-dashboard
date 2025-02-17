@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr"
+    data-theme="theme-default" data-assets-path="admin/assets/" data-template="vertical-menu-template-free"
+    data-style="light">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    
+        <title>Property</title>
+    
+        <meta name="description" content="" />
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+    
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
+          rel="stylesheet" />
+    
+        <link rel="stylesheet" href="assets/vendor/fonts/remixicon/remixicon.css" />
+    
+        <!-- Menu waves for no-customizer fix -->
+        <link rel="stylesheet" href="assets/vendor/libs/node-waves/node-waves.css" />
+    
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
+        <link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+        <link rel="stylesheet" href="assets/css/demo.css" />
+    
+        <!-- Vendors CSS -->
+        <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+        <link rel="stylesheet" href="assets/vendor/libs/apex-charts/apex-charts.css" />
+        <link rel="stylesheet" href="assets/css/auth.css" />
+        <link rel="stylesheet" href="assets/css/custom.css" />
+        <script src="assets/vendor/js/helpers.js"></script>
+   
+        <script src="assets/js/config.js"></script>
+    </head>
+
+<body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+
+            <!-- Sidebar -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme sidebar">
+                <div class="app-brand demo mt-4">
+                  <a href="#" class="app-brand-link">
+                    <span class="app-brand-text demo menu-text fw-semibold ms-2">  <img class="img-fluid" style="width: 150px" height="50px" src="assets/img/sidebar.png" alt="not-show"></span>
+                  </a>
+                
+                </div>
+                <div class="mx-3 my-2" style="border: 1px solid rgb(213, 212, 217);">
+                  
+                  </div>
+            
+                <div class="menu-inner-shadow"></div>
+            
+                <ul class="menu-inner py-1">
+            
+                  <!-- Layouts -->
+                  <li class="menu-item">
+                    <a href="#" class="menu-link menu-toggle">
+                      <i class="menu-icon tf-icons ri-layout-2-line"></i>
+                      <div data-i18n="Layouts">Layouts</div>
+                    </a>
+            
+                    <ul class="menu-sub">
+                      <li class="menu-item">
+                        <a href="#" class="menu-link">
+                          <div>layout 1</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+            
+                  <!-- Data Tables -->
+                  <li class="menu-item active">
+                    <a href="#" class="menu-link ">
+                      <i class="menu-icon tf-icons ri-grid-line"></i>
+                      <div data-i18n="Appliocant">Appliocant</div>
+                    </a>
+                  </li>
+                  
+                  <!-- Misc -->
+                  <li class="menu-header mt-7"><span class="">Preference</span></li>
+                  <li class="menu-item active">
+                    <a href="#" class="menu-link ">
+                      <i class="menu-icon tf-icons ri-lifebuoy-line"></i>
+                      <div data-i18n="Support">Setting</div>
+                    </a>
+                  </li>
+                </ul>
+            </aside>
+
+            <!-- Main layout -->
+            <div class="layout-page ms-6">
+
+                <!-- Navbar -->
+                <nav class="navbar container-xxl navbar-example navbar-expand-lg my-3">
+                    <div class="container-fluid">
+                        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
+                            <a class="nav-item nav-link px-0 me-xl-6" href="#">
+                               <i class="ri-menu-fold-4-line"></i>
+                            </a>
+                        </div>
+                        <a class="navbar-brand" href="#"> 
+                            <img class="img-fluid" style="width: 150px" height="50px" src="assets/img/navbar-logo.png" alt="not-show">
+                        </a>
+                
+                        <p class="nav-item nav-link px-0 me-xl-6 pt-3 ms-2 d-none d-md-block">
+                            <span class="text-secondary" style="font-size: 13px">Last login</span> : Aug. 20, 2023 16:33:45 PST
+                        </p>
+                        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-ex-4">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                
+                        <div class="collapse navbar-collapse" id="navbar-ex-4">
+                            <div class="navbar-nav ms-auto d-lg-flex align-items-lg-center">
+                                <li class="nav-item lh-1 me-4 navbar-search d-block d-md-none">
+                                    <p class="nav-item nav-link px-0 me-xl-6 pt-3 ms-2">
+                                        <span class="text-secondary" style="font-size: 13px">Last login</span> : Aug. 20, 2023 16:33:45 PST
+                                    </p>
+                                </li>
+                
+                                <div class="d-flex align-items-center">
+                                    <li class="nav-item lh-1 me-4 navbar-search">
+                                        <div class="nav-item d-flex align-items-center border rounded-3 ps-3">
+                                            <i class="ri-search-line ri-22px me-2"></i>
+                                            <input type="text" class="form-control border-0 shadow-none" placeholder="Search..." aria-label="Search..." />
+                                        </div>
+                                    </li>
+                                    <li class="nav-item lh-1 me-4 navbar-notification">
+                                        <button type="button" class="btn rounded-pill btn-icon btn-outline-secondary waves-effect">
+                                            <span class="tf-icons ri-notification-4-line ri-22px text-primary"></span>
+                                        </button>
+                                    </li>
+                                </div>
+                                <li class="nav-item lh-1 me-4 d-lg-block d-none">|</li>
+                
+                                <div class="d-flex align-items-lg-center mt-4 mt-lg-0">
+                                    <li class="nav-item navbar-dropdown dropdown-user dropdown px-2 user-dropdown">
+                                        <a class="nav-link btn btn-outline-secondary dropdown-toggle waves-effect" data-bs-toggle="dropdown" href="#">
+                                            <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle me-2" />
+                                            Mike Azure
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-2">
+                                                            <div class="avatar avatar-online">
+                                                                <img src="assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <h6 class="mb-0 small">John Doe</h6>
+                                                            <small class="text-muted">Admin</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li><div class="dropdown-divider"></div></li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="ri-user-3-line ri-22px me-2"></i>
+                                                    <span class="align-middle">My Profile</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="ri-settings-4-line ri-22px me-2"></i>
+                                                    <span class="align-middle">Settings</span>
+                                                </a>
+                                            </li>
+                                         
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item lh-1 me-4 d-lg-block d-none">|</li>
+                                    <li class="nav-item lh-1 me-4 logout">
+                                        <button type="button" class="btn rounded-pill btn-icon btn-outline-secondary waves-effect">
+                                            <span class="ri-logout-box-r-line ri-22px text-danger"></span>
+                                        </button>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y content-container">
+                        <div class="row">
+                            <div class="col-12 horizone-line pb-5">
+                                <div class="card">
+                                    <div class="card-header table-header horizone-line ">
+                        
+                                      <div class="d-flex align-items-center mb-3 flex-wrap">
+                                        <h5 class="mb-0">Applicants</h5>
+                                        <div class="btn-group ms-3 mb-lg-0 mb-2">
+                                            <button type="button" class="btn btn-outline-secondary   dropdown-toggle waves-effect" data-bs-toggle="dropdown" aria-expanded="false">Default view</button>
+                                            <ul class="dropdown-menu" style="">
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Action</a></li>
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Another action</a></li>
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Something else here</a></li>
+                                              <li>
+                                                <hr class="dropdown-divider">
+                                              </li>
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Separated link</a></li>
+                                            </ul>
+                                          </div>
+                                          <div class="input-group  ms-3 table-header-search">
+                        
+                                            <input type="text" class="form-control" placeholder="Search..." aria-label="Search...">
+                                        </div>
+                                      </div>
+                                      <div class="d-flex align-items-center flex-wrap">
+                        
+                                        <div class="btn-group px-2 ml-0 mb-2">
+                                            <button type="button" class="btn btn-outline-secondary rounded-2  waves-effect" data-bs-toggle="dropdown" aria-expanded="false">  <i class=" menu-icon ri-settings-2-line"></i>Manage preset</button>
+                                            <ul class="dropdown-menu" style="">
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Add New preset</a></li>
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Edit preset Agent view”</a></li>
+                        
+                                            </ul>
+                                          </div>
+                                        <div class="btn-group px-2 ml-0 mb-2">
+                                            <button type="button" class="btn  btn-outline-secondary  rounded-2  waves-effect" data-bs-toggle="dropdown" aria-expanded="false">  <i class=" menu-icon ri-bar-chart-grouped-line"></i>status</button>
+                                            <ul class="dropdown-menu" style="">
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Active</a></li>
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">InActive</a></li>
+                        
+                                            </ul>
+                                          </div>
+                                        <div class="btn-group px-2 ml-0 mb-2">
+                                            <button type="button" class="btn btn-outline-secondary rounded-2  waves-effect " data-bs-toggle="dropdown" aria-expanded="false">  <i class=" menu-icon ri-filter-line"></i>Filter</button>
+                                            <ul class="dropdown-menu" style="">
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">Active</a></li>
+                                              <li><a class="dropdown-item waves-effect" href="javascript:void(0);">InActive</a></li>
+                        
+                                            </ul>
+                                          </div>
+                                         <div class="ml-0 mb-2">
+                                            <a class="btn btn-primary  rounded-2  waves-effect" href="#"> <i class="pe-1 ri-add-circle-line"></i>Add Applicant</a>
+                                         </div>
+                                      </div>
+                                    </div>
+                                    <div class="card-body">
+                        
+                                        <div class="table-responsive text-nowrap">
+                                            <table class="table customize-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Label</th>
+                                                        <th>Name</th>
+                                                        <th>Mobile</th>
+                                                        <th>Email</th>
+                                                        <th>Beds</th>
+                                                        <th>Price</th>
+                                                        <th>Rent</th>
+                                                        <th>Areas</th>
+                                                        <th>Property Type</th>
+                                                        <th>Last Connected</th>
+                                                        <th>Phases</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-border-bottom-0">
+                                                    <tr class="table-default">
+                                                        <td>1</td>
+                                                        <td>Label 1</td>
+                                                        <td>John Doe</td>
+                                                        <td>+1234567890</td>
+                                                        <td>john.doe@example.com</td>
+                                                        <td>3.5</td>
+                                                        <td>5000-8000</td>
+                                                        <td>5000-8000</td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-label-secondary">Bedworth</span>
+                                                            <span class="badge rounded-pill bg-label-secondary">Bedfordshire</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-label-secondary">Banglow</span>
+                                                            <span class="badge rounded-pill bg-label-secondary">Commercial</span>
+                                                            <span class="badge badge-center rounded-pill bg-secondary">+9</span>
+                                                        </td>
+                                                        <td>12/6/24</td>
+                                                        <td>
+                                                            <span class="phases-circle bg-danger"></span>
+                                                            <span class="phases-circle bg-warning"></span>
+                                                            <span class="phases-circle bg-success"></span>
+                                                            <span class="phases-circle bg-info"></span>
+                                                        </td>
+                                                        <td class="action-table">
+                                                            <div class="d-flex">
+                                                                <a class="dropdown-item waves-effect" href="javascript:void(0);"><i class="ri-pencil-line"></i></a>
+                                                                <a class="dropdown-item waves-effect" href="javascript:void(0);"><i class="ri-printer-line"></i></a>
+                                                                <a class="dropdown-item waves-effect" href="javascript:void(0);"><i class="ri-delete-bin-6-line text-danger"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-default">
+                                                        <td>2</td>
+                                                        <td>Label 1</td>
+                                                        <td>John Doe</td>
+                                                        <td>+1234567890</td>
+                                                        <td>john.doe@example.com</td>
+                                                        <td>3.5</td>
+                                                        <td>5000-8000</td>
+                                                        <td>5000-8000</td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-label-secondary">Bedworth</span>
+                                                            <span class="badge rounded-pill bg-label-secondary">Bedfordshire</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-label-secondary">Banglow</span>
+                                                            <span class="badge rounded-pill bg-label-secondary">Commercial</span>
+                                                            <span class="badge badge-center rounded-pill bg-secondary">+9</span>
+                                                        </td>
+                                                        <td>12/6/24</td>
+                                                        <td>
+                                                            <span class="phases-circle bg-danger"></span>
+                                                            <span class="phases-circle bg-warning"></span>
+                                                            <span class="phases-circle bg-success"></span>
+                                                            <span class="phases-circle bg-info"></span>
+                                                        </td>
+                                                        <td class="action-table">
+                                                            <div class="d-flex">
+                                                                <a class="dropdown-item waves-effect" href="javascript:void(0);"><i class="ri-pencil-line"></i></a>
+                                                                <a class="dropdown-item waves-effect" href="javascript:void(0);"><i class="ri-printer-line"></i></a>
+                                                                <a class="dropdown-item waves-effect" href="javascript:void(0);"><i class="ri-delete-bin-6-line text-danger"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table-default">
+                                                        <td>3</td>
+                                                        <td>Label 1</td>
+                                                        <td>John Doe</td>
+                                                        <td>+1234567890</td>
+                                                        <td>john.doe@example.com</td>
+                                                        <td>3.5</td>
+                                                        <td>5000-8000</td>
+                                                        <td>5000-8000</td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-label-secondary">Bedworth</span>
+                                                            <span class="badge rounded-pill bg-label-secondary">Bedfordshire</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge rounded-pill bg-label-secondary">Banglow</span>
+                                                            <span class="badge rounded-pill bg-label-secondary">Commercial</span>
+                                                            <span class="badge badge-center rounded-pill bg-secondary">+9</span>
+                                                        </td>
+                                                        <td>12/6/24</td>
+                                                        <td>
+                                                            <span class="phases-circle bg-danger"></span>
+                                                            <span class="phases-circle bg-warning"></span>
+                                                            <span class="phases-circle bg-success"></span>
+                                                            <span class="phases-circle bg-info"></span>
+                                                        </td>
+                                                        <td class="action-table">
+                                                            <div class="d-flex">
+                                                                <a class="dropdown-item waves-effect" href="javascript:void(0);"><i class="ri-pencil-line"></i></a>
+                                                                <a class="dropdown-item waves-effect" href="javascript:void(0);"><i class="ri-printer-line"></i></a>
+                                                                <a class="dropdown-item waves-effect" href="javascript:void(0);"><i class="ri-delete-bin-6-line text-danger"></i></a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                        
+                        
+                                        </div>
+                                    </div>
+                                  </div>
+                        
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-7 col-12">
+                                <div class="row">
+                                    <div class="col-lg-4 col-6">
+                                        <div class="mb-4">
+                                            <label for="defaultSelect" class="form-label">Actions</label>
+                                            <select id="defaultSelect" class="form-select">
+                                              <option selected>Choose Action</option>
+                                              <option value="1">One</option>
+                                              <option value="2">Two</option>
+                                              <option value="3">Three</option>
+                                            </select>
+                                          </div>
+                        
+                                    </div>
+                                    <div class="col-lg-4 col-6">
+                                        <div class="mb-4">
+                                            <label for="defaultSelect" class="form-label">Flags</label>
+                                            <select id="defaultSelect" class="form-select">
+                                              <option selected>Assign Flag</option>
+                                              <option value="1">One</option>
+                                              <option value="2">Two</option>
+                                              <option value="3">Three</option>
+                                            </select>
+                                          </div>
+                        
+                                    </div>
+                                    <div class="col-lg-4 col-6">
+                                        <div class="mb-4">
+                                            <label for="defaultSelect" class="form-label">Assign to</label>
+                                            <select id="defaultSelect" class="form-select">
+                                              <option selected>Assign to</option>
+                                              <option value="1">One</option>
+                                              <option value="2">Two</option>
+                                              <option value="3">Three</option>
+                                            </select>
+                                          </div>
+                        
+                                    </div>
+                                </div>
+                        
+                        
+                        
+                            </div>
+                            <div class="col-lg-5 col-12">
+                                <div class="row align-items-end flex-wrap">
+                                    <div class="col-lg-6 col-12 mb-lg-0 mb-2">
+                                        <div class="">
+                                            <label for="largeInput" class="form-label">Send property to selected applicants(27)
+                                            </label>
+                                            <input id="largeInput" class="form-control" type="text" placeholder="2191- Appartment at Capetown">
+                                          </div>
+                        
+                                    </div>
+                                    <div class="col-lg-6 col-6 mb-lg-0 mb-2 d-flex">
+                                        <div class="ml-0">
+                                            <label for="largeInput" class="form-label">
+                                            </label>
+                                            <a class="btn btn-outline-secondary  rounded-2  waves-effect mx-2" href="#"> <i class=" menu-icon ri-settings-2-line"></i>by SMS</a>
+                                         </div>
+                                         <div class="ml-0">
+                                            <label for="largeInput" class="form-label">
+                                            </label>
+                                            <a class="btn btn-outline-secondary  rounded-2  waves-effect mx-2" href="#"> <i class=" menu-icon ri-settings-2-line"></i>by Email</a>
+                                         </div>
+                                    </div>
+                        
+                        
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12 text-end">
+                                        <a class="btn btn-outline-info  rounded-2  waves-effect mxl-0 mb-2" href="#">Add property to list</a>
+                                        <a class="btn btn-outline-info  rounded-2  waves-effect mxl-0 mb-2" href="#">Edit / View list</a>
+                                        <a class="btn btn-outline-info  rounded-2  waves-effect mxl-0 mb-2" href="#">Email list to applicants</a>
+                        
+                        
+                        
+                                    </div>
+                        
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-backdrop fade"></div>
+                </div>
+                <!-- /Content wrapper -->
+
+            </div>
+            <!-- /Main layout -->
+
+        </div>
+        <!-- /Layout container -->
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+
+    <!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js -->
+<script src="assets/vendor/libs/jquery/jquery.js"></script>
+<script src="assets/vendor/libs/popper/popper.js"></script>
+<script src="assets/vendor/js/bootstrap.js"></script>
+<script src="assets/vendor/libs/node-waves/node-waves.js"></script>
+<script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="assets/vendor/js/menu.js"></script>
+<!-- Vendors JS -->
+<script src="assets/vendor/libs/apex-charts/apexcharts.js"></script>
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+<!-- Page JS -->
+<script src="assets/js/dashboards-analytics.js"></script>
+<!-- Place this tag before closing body tag for GitHub widget button. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+
+</html>
