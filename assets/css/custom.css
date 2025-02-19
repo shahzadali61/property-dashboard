@@ -97,6 +97,10 @@ a{
      height: 40px !important;
 
 }
+.form-control:focus,
+.form-select:focus {
+  border-color: #ff5f00 !important;
+}
 .btn{
     height: 45px;
     font-size: 12px;
@@ -136,9 +140,56 @@ a{
     color: black;
     background: none;
 }
-.right-sidebar .border-line{
+.right-sidebar .border-line,
+.border-line {
     border-bottom: 1px solid #c9cbd1;
 }
+.input-icon{
+    border: none !important;
+
+}
+    .step-indicator div {
+        display: flex;
+        align-items: center;
+    }
+    .step-indicator .step-header .indicator-line {
+        width: 107px;
+        height: 2px;
+        background: #e4e8ee;
+    }
+
+
+    .step-indicator .active .indicator-line {
+        width: 107px;
+        height: 2px;
+        background: #7b8caa;
+    }
+
+    .step-indicator .circle {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        /* background: ; */
+        color: rgb(255, 94, 0);
+        border: 1px solid rgb(255, 94, 0);
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        margin-right: 7px;
+    }
+
+    .step-indicator .active .circle {
+        background: rgb(255, 94, 0);
+        color: white;
+    }
+    .step-indicator .active  {
+       font-weight: 800;
+       color: black;
+    }
+
 
 @media only screen and (max-width: 1200px) {
 

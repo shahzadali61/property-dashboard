@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default"
+    data-assets-path="admin/assets/" data-template="vertical-menu-template-free" data-style="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>Property</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/vendor/fonts/remixicon/remixicon.css" />
+
+    <!-- Menu waves for no-customizer fix -->
+    <link rel="stylesheet" href="assets/vendor/libs/node-waves/node-waves.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <script src="assets/vendor/js/helpers.js"></script>
+
+    <script src="assets/js/config.js"></script>
+</head>
+
+<body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+
+            <!-- Sidebar -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme sidebar">
+                <div class="app-brand demo mt-4">
+                    <a href="#" class="app-brand-link">
+                        <span class="app-brand-text demo menu-text fw-semibold ms-2"> <img class="img-fluid"
+                                style="width: 150px" height="50px" src="assets/img/sidebar.png" alt="not-show"></span>
+                    </a>
+
+                </div>
+                <div class="mx-3 my-2" style="border: 1px solid rgb(213, 212, 217);">
+
+                </div>
+
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+
+                    <!-- Layouts -->
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons ri-layout-2-line"></i>
+                            <div data-i18n="Layouts">Dashboard</div>
+                        </a>
+
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <div>layout 1</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item active">
+                        <a href="applicant.html" class="menu-link ">
+                          <i class="menu-icon tf-icons ri-grid-line"></i>
+                          <div data-i18n="Applicants">Applicants</div>
+                        </a>
+                      </li>
+
+                    <!-- Misc -->
+                    <li class="menu-header mt-7"><span class="">Preference</span></li>
+                    <li class="menu-item active">
+                        <a href="#" class="menu-link ">
+                            <i class="menu-icon tf-icons ri-lifebuoy-line"></i>
+                            <div data-i18n="Support">Setting</div>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main layout -->
+            <div class="layout-page ms-6">
+
+                <!-- Navbar -->
+                <nav class="navbar container-xxl navbar-example navbar-expand-lg my-3">
+                    <div class="container-fluid">
+                        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
+                            <a class="nav-item nav-link px-0 me-xl-6" href="#">
+                                <i class="ri-menu-fold-4-line"></i>
+                            </a>
+                        </div>
+                        <a class="navbar-brand" href="#">
+                            <img class="img-fluid" style="width: 150px" height="50px" src="assets/img/navbar-logo.png"
+                                alt="not-show">
+                        </a>
+
+                        <p class="nav-item nav-link px-0 me-xl-6 pt-3 ms-2 d-none d-md-block">
+                            <span class="text-secondary" style="font-size: 13px">Last login</span> : Aug. 20, 2023
+                            16:33:45 PST
+                        </p>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbar-ex-4">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbar-ex-4">
+                            <div class="navbar-nav ms-auto d-lg-flex align-items-lg-center">
+                                <li class="nav-item lh-1 me-4 navbar-search d-block d-md-none">
+                                    <p class="nav-item nav-link px-0 me-xl-6 pt-3 ms-2">
+                                        <span class="text-secondary" style="font-size: 13px">Last login</span> : Aug.
+                                        20, 2023 16:33:45 PST
+                                    </p>
+                                </li>
+
+                                <div class="d-flex align-items-center">
+                                    <li class="nav-item lh-1 me-4 navbar-search">
+                                        <div class="nav-item d-flex align-items-center border rounded-3 ps-3">
+                                            <i class="ri-search-line ri-22px me-2"></i>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Search..." aria-label="Search..." />
+                                        </div>
+                                    </li>
+                                    <li class="nav-item lh-1 me-4 navbar-notification">
+                                        <button type="button"
+                                            class="btn rounded-pill btn-icon btn-outline-secondary waves-effect">
+                                            <span class="tf-icons ri-notification-4-line ri-22px text-primary"></span>
+                                        </button>
+                                    </li>
+                                </div>
+                                <li class="nav-item lh-1 me-4 d-lg-block d-none">|</li>
+
+                                <div class="d-flex align-items-lg-center mt-4 mt-lg-0">
+                                    <li class="nav-item navbar-dropdown dropdown-user dropdown px-2 user-dropdown">
+                                        <a class="nav-link btn btn-outline-secondary dropdown-toggle waves-effect"
+                                            data-bs-toggle="dropdown" href="#">
+                                            <img src="assets/img/avatars/1.png" alt
+                                                class="w-px-40 h-auto rounded-circle me-2" />
+                                            Mike Azure
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-2">
+                                                            <div class="avatar avatar-online">
+                                                                <img src="assets/img/avatars/1.png" alt
+                                                                    class="w-px-40 h-auto rounded-circle" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <h6 class="mb-0 small">John Doe</h6>
+                                                            <small class="text-muted">Admin</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="ri-user-3-line ri-22px me-2"></i>
+                                                    <span class="align-middle">My Profile</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="ri-settings-4-line ri-22px me-2"></i>
+                                                    <span class="align-middle">Settings</span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item lh-1 me-4 d-lg-block d-none">|</li>
+                                    <li class="nav-item lh-1 me-4 logout">
+                                        <button type="button"
+                                            class="btn rounded-pill btn-icon btn-outline-secondary waves-effect">
+                                            <span class="ri-logout-box-r-line ri-22px text-danger"></span>
+                                        </button>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y content-container">
+                        <div class="row">
+                            <div class="col-12 pb-5">
+                                <div class="card">
+                                    <div class="d-sm-flex justify-content-sm-between card-header table-header">
+                                        <div class="d-flex align-items-center mb-3 flex-wrap">
+                                            <h5 class="mb-0">Create new applicant</h5>
+                                        </div>
+                                        <div class="d-flex align-items-center flex-wrap">
+                                            <div class="btn-group px-2 ml-0 mb-2">
+                                                <a href="#" class="btn btn-outline-info rounded-2 waves-effect">Add another applicant
+                                                    contact</a>
+                                            </div>
+                                            <div class="btn-group px-2 ml-0 mb-2">
+                                                <a href="#" class="btn btn-outline-info rounded-2 waves-effect">More personal
+                                                    Information</a>
+                                            </div>
+                                            <div class="ml-0 mb-2">
+                                                <a class="btn btn-primary rounded-2 waves-effect" href="#"> Next | Requirements <i
+                                                        class="ri-arrow-right-circle-line"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="step-indicator d-flex justify-content-between mb-4">
+                                            <div class="step-header active"><span class="circle">1</span> General Info. <p
+                                                    class="indicator-line mb-0 ms-2"></p>
+                                            </div>
+                                            <div class="step-header"><span class="circle">2</span> Requirements<p
+                                                class="indicator-line mb-0 ms-2"></p></div>
+                                            <div class="step-header"><span class="circle">3</span> Internal Info<p
+                                                class="indicator-line mb-0 ms-2"></p></div>
+                                            <div class="step-header"><span class="circle">4</span> Web Login<p
+                                                class="indicator-line mb-0 ms-2"></p></div>
+                                            <div class="step-header"><span class="circle">5</span> Attachments</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 border-line py-5">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h5>Personal Details
+                                                        </h5>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class=" mb-md-5 mb-2">
+                                                            <label class="form-label">Title</label>
+                                                            <select class="form-select form-select-sm">
+                                                                <option selected disabled>Choose title</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">First Name
+                        
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Last Name
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Company
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Salutation</label>
+                                                            <select class="form-select form-select-sm">
+                                                                <option selected disabled>Choose title</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                        
+                                                </div>
+                                            </div>
+                                            <div class="col-12 border-line py-5">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h5>Address
+                                                        </h5>
+                                                    </div>
+                        
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Postcode
+                        
+                                                            </label>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control rounded-2" placeholder="Choose title">
+                                                                <span class="input-group-text cursor-pointer input-icon"><i class="ri-crosshair-2-line"></i></span>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Address line 1
+                        
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Address line 2
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Town
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">County
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Country</label>
+                                                            <select class="form-select form-select-sm">
+                                                                <option selected disabled>Choose title</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                        
+                                                </div>
+                                            </div>
+                                            <div class="col-12 border-line py-5">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h5>Contact Information
+                                                        </h5>
+                                                    </div>
+                        
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Add contact number
+                        
+                                                            </label>
+                                                            <div class="input-group">
+                                                                <select class="form-select rounded-2" id="inputGroupSelect02">
+                                                                    <option selected="">Choose...</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                  </select>
+                                                                <span class="input-group-text cursor-pointer input-icon"><i class="ri-phone-line"></i></span>
+                                                              </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Phone Work
+                        
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Mobile Number
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Fax
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Email
+                                                            </label>
+                                                            <input class="form-control" type="email" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                        
+                        
+                                                </div>
+                                            </div>
+                                            <div class="col-12 border-line py-5">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h5>Guarantor Information
+                                                        </h5>
+                                                    </div>
+                        
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Name
+                        
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Phone
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Email
+                                                            </label>
+                                                            <input class="form-control" type="text" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-sm-6 col-12">
+                                                        <div class="mb-md-5 mb-2">
+                                                            <label class="form-label">Address
+                                                            </label>
+                                                            <input class="form-control" type="email" placeholder="Choose title">
+                                                        </div>
+                                                    </div>
+                        
+                        
+                                                </div>
+                                            </div>
+                                            <div class="col-12 mt-5 text-end">
+                                                <div>
+                                                    <a href="#" class="btn btn-outline-info btn-lg px-5">Add another applicant contact</a>
+                                                <a href="#" class="btn btn-outline-info btn-lg px-5">More personal Information</a>
+                        
+                                                </div>
+                                                <div class="mt-3">
+                                                    <a href="#" class="btn btn-outline-secondary btn-lg px-5">Reset</a>
+                                                    <a class="btn btn-primary rounded-2 waves-effect" href="#"> Next | Requirements <i
+                                                        class="ri-arrow-right-circle-line"></i></a>
+                        
+                                                </div>
+                        
+                        
+                                            </div>
+                                        </div>
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /Content wrapper -->
+
+            </div>
+            <!-- /Main layout -->
+
+        </div>
+        <!-- /Layout container -->
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="assets/vendor/libs/popper/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="assets/vendor/js/menu.js"></script>
+    <!-- Vendors JS -->
+    <script src="assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    <!-- Page JS -->
+    <script src="assets/js/dashboards-analytics.js"></script>
+    <!-- Place this tag before closing body tag for GitHub widget button. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+
+</html>
