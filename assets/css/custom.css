@@ -116,6 +116,29 @@ a{
 .customize-table tbody tr{
     height: 100px;
 }
+.right-sidebar{
+    width: 40% !important;
+    border-radius: 20px 0px 0px 20px;
+}
+.right-sidebar .offcanvas-header {
+    border-bottom: 1px solid #c9cbd1;
+
+}
+.right-sidebar .save-btn{
+    min-width: 100px;
+    height: 33px;
+}
+.right-sidebar .close-btn{
+    width: 30px ;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    color: black;
+    background: none;
+}
+.right-sidebar .border-line{
+    border-bottom: 1px solid #c9cbd1;
+}
 
 @media only screen and (max-width: 1200px) {
 
@@ -147,6 +170,9 @@ a{
 
 }
 @media only screen and (max-width: 576px) {
+    .right-sidebar{
+        width: 90% !important;
+    }
 
 }
 
