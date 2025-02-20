@@ -163,12 +163,52 @@ a{
 .menu-vertical .menu-item .menu-link{
     color: #a7b2c6;
 }
-.nav-tabs .nav-link.active {
-    /* border-bottom: 3px solid red !important; */
-}
-.nav-pills .nav-link.active:focus {
+.step-indicator {
+margin-top: 40px;
 
 }
+    .step-indicator div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .step-indicator .step-header .indicator-line {
+        width: 107px;
+        height: 2px;
+        background: #e4e8ee;
+    }
+
+
+    .step-indicator .active .indicator-line {
+        width: 107px;
+        height: 2px;
+        background: #7b8caa;
+    }
+
+    .step-indicator .circle {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        /* background: ; */
+        color: rgb(255, 94, 0);
+        border: 1px solid rgb(255, 94, 0);
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+        z-index: 1;
+        margin-right: 7px;
+    }
+
+    .step-indicator .active .circle {
+        background: rgb(255, 94, 0);
+        color: white;
+    }
+    .step-indicator .active  {
+       font-weight: 800;
+       color: black;
+    }
 
 
 @media only screen and (max-width: 1200px) {
@@ -207,4 +247,3 @@ a{
 
 }
 
- 
