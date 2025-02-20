@@ -34,6 +34,7 @@
 .btn-primary {
     background-color: rgb(255, 94, 0);
     border-color: rgb(255, 94, 0);
+    color: white;
 }
 
 .btn-primary:hover,
@@ -43,6 +44,7 @@
     background-color: rgb(248, 113, 34) !important;
     border-color: rgb(248, 113, 34) !important;
     box-shadow: none !important; /* Removes any Bootstrap hover/focus effects */
+    color: white;
 }
 .text-primary{
     color: rgb(255, 94, 0) !important;
@@ -148,47 +150,25 @@ a{
     border: none !important;
 
 }
-    .step-indicator div {
-        display: flex;
-        align-items: center;
-    }
-    .step-indicator .step-header .indicator-line {
-        width: 107px;
-        height: 2px;
-        background: #e4e8ee;
-    }
+.multi-tabs{
+    margin-top: 50px;
+}
+.multi-tabs .nav-link {
+    color: #c0bec5;
 
+}
+.multi-tabs .nav-tabs .nav-link.active{
+   color: black ;
+}
+.menu-vertical .menu-item .menu-link{
+    color: #a7b2c6;
+}
+.nav-tabs .nav-link.active {
+    /* border-bottom: 3px solid red !important; */
+}
+.nav-pills .nav-link.active:focus {
 
-    .step-indicator .active .indicator-line {
-        width: 107px;
-        height: 2px;
-        background: #7b8caa;
-    }
-
-    .step-indicator .circle {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        /* background: ; */
-        color: rgb(255, 94, 0);
-        border: 1px solid rgb(255, 94, 0);
-        line-height: 30px;
-        text-align: center;
-        font-weight: bold;
-        position: relative;
-        z-index: 1;
-        margin-right: 7px;
-    }
-
-    .step-indicator .active .circle {
-        background: rgb(255, 94, 0);
-        color: white;
-    }
-    .step-indicator .active  {
-       font-weight: 800;
-       color: black;
-    }
+}
 
 
 @media only screen and (max-width: 1200px) {
@@ -227,3 +207,4 @@ a{
 
 }
 
+ 
