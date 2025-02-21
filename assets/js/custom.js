@@ -24,9 +24,9 @@ $("#add-guarantor-btn").click(function (e) {
 });
 $(document).ready(function () {
     // When "Select All" checkbox is clicked
-    $(".all-propert-select").click(function () {
+    $(".all-property-select").click(function () {
         var isChecked = $(this).prop("checked"); // Get the checked status
-        $(".propert-checkbox").each(function () {
+        $(".property-checkbox").each(function () {
             $(this).prop("checked", isChecked); // Apply the same checked status to all checkboxes
         });
     });
