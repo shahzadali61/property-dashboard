@@ -22,3 +22,21 @@ $("#add-guarantor-btn").click(function (e) {
     var nextTab = new bootstrap.Tab($("#disabled-tab"));
     nextTab.show();
 });
+$(document).ready(function () {
+    // When "Select All" checkbox is clicked
+    $(".all-propert-select").click(function () {
+        var isChecked = $(this).prop("checked"); // Get the checked status
+        $(".propert-checkbox").each(function () {
+            $(this).prop("checked", isChecked); // Apply the same checked status to all checkboxes
+        });
+    });
+});
+$(document).ready(function () {
+    // When "Select All" checkbox is clicked
+    $(".all-features-select").click(function () {
+        var isChecked = $(this).prop("checked"); // Get the checked status
+        $(".features-checkbox").each(function () {
+            $(this).prop("checked", isChecked); // Apply the same checked status to all checkboxes
+        });
+    });
+});
