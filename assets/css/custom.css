@@ -182,7 +182,7 @@ margin-top: 40px;
     .step-indicator .active .indicator-line {
         width: 107px;
         height: 2px;
-        background: #7b8caa;
+        background: rgb(255, 94, 0);
     }
 
     .step-indicator .circle {
@@ -247,3 +247,4 @@ margin-top: 40px;
 
 }
 
+    
