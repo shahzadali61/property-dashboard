@@ -209,6 +209,12 @@ margin-top: 40px;
        font-weight: 800;
        color: black;
     }
+    .upload-file{
+        background-color: #fafafa;
+        height: 400px;
+        border: 2px dotted #ada8a8;
+        cursor: pointer;
+    }
 
 
 @media only screen and (max-width: 1200px) {
@@ -247,4 +253,3 @@ margin-top: 40px;
 
 }
 
-    
