@@ -215,8 +215,76 @@ margin-top: 40px;
         border: 2px dotted #ada8a8;
         cursor: pointer;
     }
+    .user-profile {
+        background-color: #fafafa;
+        border-radius: 10px;
+    }
+
+    .profile-img {
+        width: 150px;
+        text-align: center;
+    }
+
+    .profile-img img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profile-contact h4 {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .user-profile ul {
+        padding: 0;
+    }
+
+    .user-profile ul li {
+        padding-bottom: 8px;
+    }
+
+    .user-profile ul li a {
+        color: #292e3b;
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+    }
+
+    .user-profile ul li a i {
+        margin-right: 8px;
+        font-size: 16px;
+    }
+    .activity-summary .card{
+        background-color: #fafafa;
+        border-radius: 10px;
+
+    }
+    .summary-card{
+       border: 1px solid #e4e8ee;
+    }
+    .summary-card .card-body{
+       height: 200px;
+    }
+    .summary-card .card-header{
+       background-color: #e4e8ee;
+    }
+    .summary-card .summary-btn{
+        height: 30px;
+        padding: 9px;
+        background-color: white;
+    }
 
 
+
+@media only screen and (min-width: 768px) {
+    .title-input-dropdown{
+        width:25%;
+    }
+
+}
 @media only screen and (max-width: 1200px) {
 
 }
@@ -250,6 +318,14 @@ margin-top: 40px;
     .right-sidebar{
         width: 90% !important;
     }
+    .profile-img {
+        width: 100%;
+    }
+    .profile-contact {
+        width: 100%;
+        margin-top: 20px;
+    }
+
 
 }
 
