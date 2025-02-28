@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr"
+    data-theme="theme-default" data-assets-path="admin/assets/"
+    data-template="vertical-menu-template-free"
+    data-style="light">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    
+        <title>Property</title>
+    
+        <meta name="description" content="" />
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="" />
+    
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="assets/vendor/fonts/remixicon/remixicon.css" />
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
+        <link rel="stylesheet" href="assets/css/auth.css" />
+        <link rel="stylesheet" href="assets/css/custom.css" />
+    </head>
+
+<body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+
+            <!-- Sidebar -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme sidebar">
+                <div class="app-brand demo mt-4">
+                    <a href="#" class="app-brand-link">
+                        <span class="app-brand-text demo menu-text fw-semibold ms-2"> <img class="img-fluid"
+                                style="width: 150px" height="50px" src="assets/img/sidebar.png" alt="not-show"></span>
+                    </a>
+
+                </div>
+                <div class="mx-3 my-2" style="border: 1px solid rgb(213, 212, 217);">
+
+                </div>
+
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+
+                    <!-- Layouts -->
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons ri-layout-2-line"></i>
+                            <div data-i18n="Layouts">Dashboard</div>
+                        </a>
+
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">
+                                    <div>layout 1</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons ri-layout-2-line"></i>
+                            <div data-i18n="Layouts">Applicants</div>
+                        </a>
+
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="applicant.html" class="menu-link">
+                                    <div>Applicant List</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="summary.html" class="menu-link">
+                                    <div>Summary</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="communication.html" class="menu-link">
+                                    <div>Communication</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="matching-properties.html" class="menu-link">
+                                    <div>matching-properties</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="viewing.html" class="menu-link">
+                                    <div>Viewing</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="offers.html" class="menu-link">
+                                    <div>Offers</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="personal-info.html" class="menu-link">
+                                    <div>Personal Info</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Misc -->
+                    <li class="menu-header mt-7"><span class="">Preference</span></li>
+                    <li class="menu-item active">
+                        <a href="#" class="menu-link ">
+                            <i class="menu-icon tf-icons ri-lifebuoy-line"></i>
+                            <div data-i18n="Support">Setting</div>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main layout -->
+            <div class="layout-page ms-6">
+
+                <!-- Navbar -->
+                <nav class="navbar container-xxl navbar-example navbar-expand-lg my-3">
+                    <div class="container-fluid">
+                        <div class="layout-menu-toggle navbar-nav align-items-xl-center me-4 me-xl-0 d-xl-none">
+                            <a class="nav-item nav-link px-0 me-xl-6" href="#">
+                                <i class="ri-menu-fold-4-line"></i>
+                            </a>
+                        </div>
+                        <a class="navbar-brand" href="#">
+                            <img class="img-fluid" style="width: 150px" height="50px" src="assets/img/navbar-logo.png"
+                                alt="not-show">
+                        </a>
+
+                        <p class="nav-item nav-link px-0 me-xl-6 pt-3 ms-2 d-none d-md-block">
+                            <span class="text-secondary" style="font-size: 13px">Last login</span> : Aug. 20, 2023
+                            16:33:45 PST
+                        </p>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbar-ex-4">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbar-ex-4">
+                            <div class="navbar-nav ms-auto d-lg-flex align-items-lg-center">
+                                <li class="nav-item lh-1 me-4 navbar-search d-block d-md-none">
+                                    <p class="nav-item nav-link px-0 me-xl-6 pt-3 ms-2">
+                                        <span class="text-secondary" style="font-size: 13px">Last login</span> : Aug.
+                                        20, 2023 16:33:45 PST
+                                    </p>
+                                </li>
+
+                                <div class="d-flex align-items-center">
+                                    <li class="nav-item lh-1 me-4 navbar-search">
+                                        <div class="nav-item d-flex align-items-center border rounded-3 ps-3">
+                                            <i class="ri-search-line ri-22px me-2"></i>
+                                            <input type="text" class="form-control border-0 shadow-none"
+                                                placeholder="Search..." aria-label="Search..." />
+                                        </div>
+                                    </li>
+                                    <li class="nav-item lh-1 me-4 navbar-notification">
+                                        <button type="button"
+                                            class="btn rounded-pill btn-icon btn-outline-secondary waves-effect">
+                                            <span class="tf-icons ri-notification-4-line ri-22px text-primary"></span>
+                                        </button>
+                                    </li>
+                                </div>
+                                <li class="nav-item lh-1 me-4 d-lg-block d-none">|</li>
+
+                                <div class="d-flex align-items-lg-center mt-4 mt-lg-0">
+                                    <li class="nav-item navbar-dropdown dropdown-user dropdown px-2 user-dropdown">
+                                        <a class="nav-link btn btn-outline-secondary dropdown-toggle waves-effect"
+                                            data-bs-toggle="dropdown" href="#">
+                                            <img src="assets/img/avatars/1.png" alt
+                                                class="w-px-40 h-auto rounded-circle me-2" />
+                                            Mike Azure
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end mt-3 py-2">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-2">
+                                                            <div class="avatar avatar-online">
+                                                                <img src="assets/img/avatars/1.png" alt
+                                                                    class="w-px-40 h-auto rounded-circle" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <h6 class="mb-0 small">John Doe</h6>
+                                                            <small class="text-muted">Admin</small>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <div class="dropdown-divider"></div>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="ri-user-3-line ri-22px me-2"></i>
+                                                    <span class="align-middle">My Profile</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <i class="ri-settings-4-line ri-22px me-2"></i>
+                                                    <span class="align-middle">Settings</span>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item lh-1 me-4 d-lg-block d-none">|</li>
+                                    <li class="nav-item lh-1 me-4 logout">
+                                        <button type="button"
+                                            class="btn rounded-pill btn-icon btn-outline-secondary waves-effect">
+                                            <span class="ri-logout-box-r-line ri-22px text-danger"></span>
+                                        </button>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y content-container">
+                        <div class="row">
+                            <div class=" col-12 pb-5">
+                        
+                                <div class=" border-line py-5 table-header">
+                                    <div class="d-flex align-items-center justify-content-between  mb-3 flex-wrap">
+                                        <h5 class="mb-0">Summary</h5>
+                                        <a class="btn btn-primary" href="">Action<i class="ri-arrow-right-s-line"></i></a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto py-5">
+                                <div class="user-profile p-5 d-flex flex-wrap align-items-center justify-content-center">
+                                    <div class="profile-img text-center">
+                                        <img class="img-fluid" src="assets/img/user-image.png" alt="User Image">
+                                        <p class="mb-0 text-dark">Applicant, Buy</p>
+                                        <p class="mb-0 text-dark">
+                                            <i class="ri-circle-fill text-success" style="font-size: 10px;"></i> Active
+                                        </p>
+                                    </div>
+                                    <div class="profile-contact ms-4">
+                                        <h4>David Kelsey</h4>
+                                        <div class="d-flex flex-wrap mt-sm-4">
+                                            <ul class="list-unstyled me-md-4 mb-0">
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-phone-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-keyboard-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-smartphone-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-mail-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto border-line py-5">
+                                <h5 class="mb-0">Previous address</h5>
+                            </div>
+                            <div class="col-lg-10 mx-auto activity-summary mt-5">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Address line 1</p>
+                                        <h6>The Black Bull</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Address line 1</p>
+                                        <h6>The Black Bull</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">City Town</p>
+                                        <h6>Ingatestone</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">County/State</p>
+                                        <h6>Essex</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Country</p>
+                                        <h6>UK</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Passcode</p>
+                                        <h6>SJI32289</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto border-line py-5">
+                                <h5 class="mb-0">More Info
+                                </h5>
+                            </div>
+                            <div class="col-lg-10 mx-auto activity-summary mt-5 border-line py-5">
+                                <div class="row">
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Fax</p>
+                                        <h6>+1 8292 22 3833</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Pager</p>
+                                        <h6>+1 8292 22 3833</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Web</p>
+                                        <h6>Ingatestone.com</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Date of birth</p>
+                                        <h6>12-02-1989</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Birth Place</p>
+                                        <h6>London</h6>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3 col-6 mb-2">
+                                        <p class="mb-1 ">Gender</p>
+                                        <h6>Male</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto border-line py-5">
+                                <h5 class="mb-0">Applicant 2 info.</h5>
+                        
+                            </div>
+                            <div class="col-lg-10 mx-auto py-5">
+                                <div class="user-profile p-5 d-flex flex-wrap align-items-center justify-content-center">
+                                    <div class="profile-img text-center">
+                                        <img class="img-fluid" src="assets/img/user-image.png" alt="User Image">
+                                        <p class="mb-0 text-dark">Applicant, Buy</p>
+                                        <p class="mb-0 text-dark">
+                                            <i class="ri-circle-fill text-success" style="font-size: 10px;"></i> Active
+                                        </p>
+                                    </div>
+                                    <div class="profile-contact ms-4">
+                                        <h4>David Kelsey</h4>
+                                        <div class="d-flex flex-wrap mt-sm-4">
+                                            <ul class="list-unstyled me-md-4 mb-0">
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-phone-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-keyboard-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-smartphone-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-mail-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Content wrapper -->
+
+            </div>
+            <!-- /Main layout -->
+
+        </div>
+        <!-- /Layout container -->
+
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+
+    <!-- Core JS -->
+    <script src="assets/vendor/js/helpers.js"></script>
+    <script src="assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="assets/vendor/libs/popper/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/vendor/js/menu.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom.js"></script>
+ 
+
+</body>
+
+</html>

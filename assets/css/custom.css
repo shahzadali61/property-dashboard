@@ -276,6 +276,10 @@ margin-top: 40px;
         padding: 9px;
         background-color: white;
     }
+    .viewing-card{
+        border: 1px solid #e4e8ee;
+        height: 350px;
+    }
 
 
 
@@ -309,9 +313,13 @@ margin-top: 40px;
         position: fixed;
         width: 100%;
     }
+    .right-sidebar{
+        width: 70% !important;
+    }
 
 }
 @media only screen and (max-width: 768px) {
+
 
 }
 @media only screen and (max-width: 576px) {
