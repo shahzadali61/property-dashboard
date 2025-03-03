@@ -21,7 +21,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
             rel="stylesheet" />
-        
+        <link rel="stylesheet" href="assets/vendor/fonts/remixicon/remixicon.css" />
         <!-- Core CSS -->
         <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
         <link rel="stylesheet" href="assets/css/auth.css" />
@@ -85,6 +85,26 @@
                             <li class="menu-item">
                                 <a href="communication.html" class="menu-link">
                                     <div>Communication</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="matching-properties.html" class="menu-link">
+                                    <div>matching-properties</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="viewing.html" class="menu-link">
+                                    <div>Viewing</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="offers.html" class="menu-link">
+                                    <div>Offers</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="personal-info.html" class="menu-link">
+                                    <div>Personal Info</div>
                                 </a>
                             </li>
                         </ul>
@@ -211,125 +231,59 @@
                 <div class="content-wrapper">
                     <div class="container-xxl flex-grow-1 container-p-y content-container">
                         <div class="row">
-                            <div class="col-lg-10 col-12 mx-auto pb-5">
-                                <div class="card">
-                                    <div class=" border-line py-5 table-header">
-                                        <div class="d-flex align-items-center mb-3 flex-wrap">
-                                            <h5 class="mb-0">Create new applicant</h5>
-                                        </div>
+                            <div class=" col-12 pb-5">
                         
+                                <div class=" border-line py-5 table-header">
+                                    <div class="d-flex align-items-center justify-content-between  mb-3 flex-wrap">
+                                        <h5 class="mb-0">Web Login</h5>
+                                        <a class="btn btn-primary" href="">Action<i class="ri-arrow-right-s-line"></i></a>
                                     </div>
-                                    <div class="card-body">
-                                        <div class="step-indicator d-flex flex-wrap mb-4">
-                                            <div class="step-header active"><span class="circle">1</span> General Info. <p
-                                                    class="indicator-line mb-0 ms-2"></p>
-                                            </div>
-                                            <div class="step-header"><span class="circle">2</span> Requirements<p
-                                                class="indicator-line mb-0 ms-2"></p></div>
-                                            <div class="step-header"><span class="circle">3</span> Internal Info<p
-                                                class="indicator-line mb-0 ms-2"></p></div>
-                                            <div class="step-header"><span class="circle">4</span> Web Login<p
-                                                class="indicator-line mb-0 ms-2"></p></div>
-                                            <div class="step-header"><span class="circle">5</span> Attachments</div>
-                                        </div>
-                                        <div class="row  border-line py-5 ">
-                                            <div class="col-12">
-                                                <h5>More personal information
-                                                </h5>
-                                            </div>
-                                            <div class="col-lg-6 col-12">
-                                                <div class="mb-md-5 mb-2">
-                                                    <label class="form-label">Date of Birth
                         
-                        
-                                                    </label>
-                                                    <div class="input-group">
-                                                        <input type="date" class="form-control rounded-2" placeholder="Enter postcode">
-                                                        <span class="input-group-text cursor-pointer input-icon"><i class="ri-calendar-line"></i></span>
-                                                      </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-12">
-                                                <div class=" mb-md-5 mb-2">
-                                                    <label class="form-label">Website
-                                                    </label>
-                                                    <input class="form-control" type="url" placeholder="www">
-                        
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-12">
-                                                <div class=" mb-md-5 mb-2">
-                                                    <label class="form-label">Pager
-                        
-                                                    </label>
-                                                    <input class="form-control" type="text" placeholder="xxx-xxx-xxxxx">
-                        
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-12">
-                                                <div class=" mb-md-5 mb-2">
-                                                    <label class="form-label">Birth Place
-                        
-                                                    </label>
-                                                    <input class="form-control" type="text" placeholder="Enter your birth place">
-                        
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-12">
-                                                <div class=" mb-md-5 mb-2">
-                                                    <label class="form-label">Nationality
-                        
-                                                    </label>
-                                                    <input class="form-control" type="text" placeholder="Enter your nationality">
-                        
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-12">
-                                                <div class=" mb-md-5 mb-2">
-                                                    <label class="form-label">Passport Number
-                        
-                                                    </label>
-                                                    <input class="form-control" type="text" placeholder="xxx-xxx-xxx-xxxx">
-                        
-                                                </div>
-                                            </div>
-                                            <div class="col-md p-6">
-                                                <small class="text-light fw-medium d-block">Gender</small>
-                                                <div class="form-check form-check-inline mt-4">
-                                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                                  <label class="form-check-label" for="inlineRadio1">Male</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                                  <label class="form-check-label" for="inlineRadio2">Female</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                                  <label class="form-check-label" for="inlineRadio3">Unspecified</label>
-                                                </div>
-                                              </div>
-                        
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 mt-5 text-end">
-                                                <div>
-                                                    <a href="#" class="btn btn-outline-info btn-lg px-5">Add another applicant contact</a>
-                                                <a href="{{ route('personal-detail-part-2') }}" class="btn btn-outline-info btn-lg px-5 mx-1">More personal Information</a>
-                        
-                                                </div>
-                                                <div class="mt-5">
-                                                    <a href="#" class="btn btn-outline-secondary btn-lg mx-1">Cancel</a>
-                                                    <button  class="btn btn-outline-secondary btn-lg mx-1 add-contact-btn">Back</button>
-                                                    <button class="btn btn-primary rounded-2 waves-effect mx-1" > Next | Requirements  <i
-                                                        class="ri-arrow-right-circle-line"></i></button>
-                        
-                                                </div>
-                        
-                        
-                                            </div>
-                                        </div>
-                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto py-5">
+                                <div class="user-profile p-5 d-flex flex-wrap align-items-center justify-content-center">
+                                    <div class="profile-img text-center">
+                                        <img class="img-fluid" src="assets/img/user-image.png" alt="User Image">
+                                        <p class="mb-0 text-dark">Applicant, Buy</p>
+                                        <p class="mb-0 text-dark">
+                                            <i class="ri-circle-fill text-success" style="font-size: 10px;"></i> Active
+                                        </p>
                                     </div>
+                                    <div class="profile-contact ms-4">
+                                        <h4>David Kelsey</h4>
+                                        <div class="d-flex flex-wrap mt-sm-4">
+                                            <ul class="list-unstyled me-md-4 mb-0">
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-phone-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-keyboard-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-smartphone-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <a href="#" class="contact-link"><i class="ri-mail-line"></i> +1 8292 22 3833</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6 col-12">
+                                <div>
+                                    <label for="">
+                                        Username
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="Username">
                                 </div>
                             </div>
                         </div>
