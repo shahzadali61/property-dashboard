@@ -1213,78 +1213,72 @@
     <script src="assets/js/main.js"></script>
     <script>
         $(document).ready(function () {
-            // Initial State
             let steps = ["#PersonalDetailTab", "#RequirementsTab", "#InternalInformation", "#WebLogin", "#Attachments"];
             let stepHeaders = [".step-general-info", ".step-requirements", ".step-internal-info", ".step-web-login", ".step-attachments"];
-            let currentStep = 0; // Start from step 1 (Index 0)
-
+            let currentStep = 0; // Start from Step 1 (Index 0)
+    
             function showStep(newStep) {
-                if (newStep < 0 || newStep > currentStep + 1) return; // Only allow step-by-step movement
-
-                // Hide all steps
-                $(".tab-content > div").hide();
-                $(steps[newStep]).show();
-
-                // Remove active class from all headers
+                if (newStep < 0 || newStep > currentStep + 1) return;
+    
+                $(".tab-content > div").hide(); // Hide all steps
+                $(steps[newStep]).show(); // Show the required step
+    
                 $(".step-header").removeClass("active");
-
-                // Mark completed steps as active
                 for (let i = 0; i <= newStep; i++) {
                     $(stepHeaders[i]).addClass("active");
                 }
-
-                // Remove active class from future steps when going back
                 for (let i = newStep + 1; i < stepHeaders.length; i++) {
                     $(stepHeaders[i]).removeClass("active");
                 }
-
-                currentStep = newStep; // Update current step
+    
+                currentStep = newStep;
             }
-
-            // Next Step Click
+    
+            function validateFirstName() {
+                let firstNameInput = $("#GeneralInfoFirstName").val().trim();
+                let errorMessage = $("#firstNameError");
+    
+                if (firstNameInput === "") {
+                    errorMessage.text("First Name is required").show();
+                    $("#GeneralInfoFirstName").addClass("is-invalid");
+                    return false;
+                }
+    
+                errorMessage.hide();
+                $("#GeneralInfoFirstName").removeClass("is-invalid");
+                return true;
+            }
+    
+            // ✅ "Next" Button Click
             $("#nextStep").click(function (e) {
                 e.preventDefault();
-
-                // Validation for first step
-                if (currentStep === 0) {
-                    let firstNameInput = $("#GeneralInfoFirstName");
-                    let errorMessage = $("#firstNameError");
-
-                    if (firstNameInput.val().trim() === "") {
-                        errorMessage.text("First Name is required").show();
-                        firstNameInput.addClass("is-invalid");
-                        return;
-                    }
-
-                    errorMessage.hide();
-                    firstNameInput.removeClass("is-invalid");
+                if (validateFirstName()) {
+                    showStep(1); // Move to RequirementsTab
                 }
-
-                showStep(currentStep + 1);
             });
-
-            $("#InternalInfoTab").click(function (e) {
-                e.preventDefault();
-                showStep(2);
+    
+            // ✅ Prevent Clicking "Requirements" Step If First Name Is Empty
+            $(".step-requirements").click(function (e) {
+                if (!validateFirstName()) {
+                    e.preventDefault(); // Stop click action if validation fails
+                    alert("Please enter your First Name before proceeding!");
+                    return;
+                }
+                showStep(1);
             });
-
-            $("#WebLoginTab").click(function (e) {
-                e.preventDefault();
-                showStep(3);
-            });
-
-            $("#AttachmentsTab").click(function (e) {
-                e.preventDefault();
-                showStep(4);
-            });
-
-            // Step Header Click for Backward Navigation
+    
+            // ✅ Backward Navigation
             $(".step-header").click(function () {
                 let stepIndex = $(".step-header").index(this);
+    
+                if (stepIndex === 1 && !validateFirstName()) {
+                    alert("Please enter your First Name before proceeding!");
+                    return;
+                }
+    
                 showStep(stepIndex);
             });
         });
-
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
