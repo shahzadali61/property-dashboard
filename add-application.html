@@ -244,19 +244,19 @@
                                                 <span class="circle">1</span> General Info.
                                                 <p class="indicator-line mb-0 ms-2"></p>
                                             </div>
-                                            <div class="step-header step-requirements">
+                                            <div class="step-header step-requirements nextStep ">
                                                 <span class="circle">2</span> Requirements
                                                 <p class="indicator-line mb-0 ms-2"></p>
                                             </div>
-                                            <div class="step-header step-internal-info">
+                                            <div class="step-header step-internal-info InternalInfoTab ">
                                                 <span class="circle">3</span> Internal Info
                                                 <p class="indicator-line mb-0 ms-2"></p>
                                             </div>
-                                            <div class="step-header step-web-login">
+                                            <div class="step-header step-web-login WebLoginTab ">
                                                 <span class="circle">4</span> Web Login
                                                 <p class="indicator-line mb-0 ms-2"></p>
                                             </div>
-                                            <div class="step-header step-attachments">
+                                            <div class="step-header step-attachments AttachmentsTab ">
                                                 <span class="circle">5</span> Attachments
                                             </div>
                                         </div>
@@ -284,11 +284,9 @@
                                                             </div>
                                                             <div class="col-lg-4 col-sm-6 col-12">
                                                                 <div class="mb-md-5 mb-2">
-                                                                    <label class="form-label">First Name
-                        
-                                                                    </label>
-                                                                    <input id="GeneralInfoFirstName" class="form-control" type="text"
-                                                                        placeholder="Enter your first name">
+                                                                    <label class="form-label">First Name</label>
+                                                                    <input id="GeneralInfoFirstName" class="form-control" type="text" placeholder="Enter your first name">
+                                                                    <span id="firstNameError" class="text-danger mt-1" style="display: none;"></span>
                                                                 </div>
                                                             </div>
                                                             <div class="col-lg-4 col-sm-6 col-12">
@@ -1119,78 +1117,66 @@
     <script src="assets/vendor/js/bootstrap.js"></script>
     <script src="assets/vendor/js/menu.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>    $(document).ready(function () {
-        // Initially show PersonalDetailTab, hide others
-        $("#PersonalDetailTab").show();
-        $("#RequirementsTab, #InternalInformation, #WebLogin, #Attachments").hide();
-    
-        // When clicking "Next | Requirements"
-        $("#nextStep").click(function (e) {
-            e.preventDefault();
-    
-            let firstNameInput = $("#GeneralInfoFirstName");
-    
-            // Check if First Name is filled
-            if (firstNameInput.val().trim() === "") {
-                alert("First Name is required");
-                firstNameInput.focus();
-            } else {
-                // Hide PersonalDetailTab and show RequirementsTab
-                $("#PersonalDetailTab").hide();
-                $("#RequirementsTab").show();
-    
-                // Keep previous steps active and add "active" class
-                $(".step-general-info").addClass("active");
-                $(".step-requirements").addClass("active");
-            }
-        });
-    
-        // When clicking "Internal Info"
-        $("#InternalInfoTab").click(function (e) {
-            e.preventDefault();
-    
-            // Hide RequirementsTab and show InternalInformation
-            $("#RequirementsTab").hide();
-            $("#InternalInformation").show();
-    
-            // Keep previous steps active and add "active" class
-            $(".step-general-info").addClass("active");
-            $(".step-requirements").addClass("active");
-            $(".step-internal-info").addClass("active");
-        });
-    
-        // When clicking "Web Login"
-        $("#WebLoginTab").click(function (e) {
-            e.preventDefault();
-    
-            // Hide InternalInformation and show WebLogin
-            $("#InternalInformation").hide();
-            $("#WebLogin").show();
-    
-            // Keep previous steps active and add "active" class
-            $(".step-general-info").addClass("active");
-            $(".step-requirements").addClass("active");
-            $(".step-internal-info").addClass("active");
-            $(".step-web-login").addClass("active");
-        });
-    
-        // When clicking "Attachments"
-        $("#AttachmentsTab").click(function (e) {
-            e.preventDefault();
-    
-            // Hide WebLogin and show Attachments
-            $("#WebLogin").hide();
-            $("#Attachments").show();
-    
-            // Keep previous steps active and add "active" class
-            $(".step-general-info").addClass("active");
-            $(".step-requirements").addClass("active");
-            $(".step-internal-info").addClass("active");
-            $(".step-web-login").addClass("active");
-            $(".step-attachments").addClass("active");
-        });
-    });
-    </script>
+    <script>
+        $(document).ready(function () {
+          // Initially show PersonalDetailTab, hide others
+          $("#PersonalDetailTab").show();
+          $("#RequirementsTab, #InternalInformation, #WebLogin, #Attachments").hide();
+
+          function showStep(currentTab, nextTab, currentStep, nextStep) {
+              $(currentTab).hide();
+              $(nextTab).show();
+              $(currentStep).addClass("active");
+              $(nextStep).addClass("active");
+          }
+
+          // When clicking "Next | Requirements"
+          $(".nextStep").click(function (e) {
+              e.preventDefault();
+
+              let firstNameInput = $("#GeneralInfoFirstName");
+              let errorMessage = $("#firstNameError");
+
+              if (firstNameInput.val().trim() === "") {
+                  errorMessage.text("First Name is required").show();
+                  firstNameInput.addClass("is-invalid");
+                  return;
+              }
+
+              errorMessage.hide();
+              firstNameInput.removeClass("is-invalid");
+
+              showStep("#PersonalDetailTab", "#RequirementsTab", ".step-general-info", ".step-requirements");
+          });
+
+          // When clicking "Internal Info"
+          $(".InternalInfoTab").click(function (e) {
+              e.preventDefault();
+              showStep("#RequirementsTab", "#InternalInformation", ".step-requirements", ".step-internal-info");
+          });
+
+          // When clicking "Web Login"
+          $(".WebLoginTab").click(function (e) {
+              e.preventDefault();
+              showStep("#InternalInformation", "#WebLogin", ".step-internal-info", ".step-web-login");
+          });
+
+          // When clicking "Attachments"
+          $(".AttachmentsTab").click(function (e) {
+              e.preventDefault();
+              showStep("#WebLogin", "#Attachments", ".step-web-login", ".step-attachments");
+          });
+
+          // Click on step headers to navigate
+          $(".step-header").click(function () {
+              let index = $(".step-header").index(this);
+              if ($(this).hasClass("active")) {
+                  $(".tab-content > div").hide();
+                  $($(".tab-content > div").get(index)).show();
+              }
+          });
+      });
+</script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
          let createAccountRadio = document.getElementById('createAccountRadio');
