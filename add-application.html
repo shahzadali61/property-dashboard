@@ -1235,17 +1235,18 @@
             }
     
             function validateFirstName() {
-                let firstNameInput = $("#GeneralInfoFirstName").val().trim();
+                let firstNameInput = $("#GeneralInfoFirstName");
+                let firstNameValue = firstNameInput.val().trim();
                 let errorMessage = $("#firstNameError");
     
-                if (firstNameInput === "") {
+                if (firstNameValue === "") {
                     errorMessage.text("First Name is required").show();
-                    $("#GeneralInfoFirstName").addClass("is-invalid");
+                    firstNameInput.addClass("is-invalid");
                     return false;
                 }
     
                 errorMessage.hide();
-                $("#GeneralInfoFirstName").removeClass("is-invalid");
+                firstNameInput.removeClass("is-invalid");
                 return true;
             }
     
@@ -1261,7 +1262,6 @@
             $(".step-requirements").click(function (e) {
                 if (!validateFirstName()) {
                     e.preventDefault(); // Stop click action if validation fails
-                    alert("Please enter your First Name before proceeding!");
                     return;
                 }
                 showStep(1);
@@ -1272,7 +1272,6 @@
                 let stepIndex = $(".step-header").index(this);
     
                 if (stepIndex === 1 && !validateFirstName()) {
-                    alert("Please enter your First Name before proceeding!");
                     return;
                 }
     
