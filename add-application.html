@@ -1211,74 +1211,108 @@
     <script src="assets/vendor/js/bootstrap.js"></script>
     <script src="assets/vendor/js/menu.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            let steps = ["#PersonalDetailTab", "#RequirementsTab", "#InternalInformation", "#WebLogin", "#Attachments"];
-            let stepHeaders = [".step-general-info", ".step-requirements", ".step-internal-info", ".step-web-login", ".step-attachments"];
-            let currentStep = 0; // Start from Step 1 (Index 0)
-    
-            function showStep(newStep) {
-                if (newStep < 0 || newStep > currentStep + 1) return;
-    
-                $(".tab-content > div").hide(); // Hide all steps
-                $(steps[newStep]).show(); // Show the required step
-    
-                $(".step-header").removeClass("active");
-                for (let i = 0; i <= newStep; i++) {
-                    $(stepHeaders[i]).addClass("active");
-                }
-                for (let i = newStep + 1; i < stepHeaders.length; i++) {
-                    $(stepHeaders[i]).removeClass("active");
-                }
-    
-                currentStep = newStep;
+   <script>
+    $(document).ready(function () {
+        let steps = [
+            "#PersonalDetailTab",
+            "#RequirementsTab",
+            "#InternalInformation",
+            "#WebLogin",
+            "#Attachments"
+        ];
+        let stepHeaders = [
+            ".step-general-info",
+            ".step-requirements",
+            ".step-internal-info",
+            ".step-web-login",
+            ".step-attachments"
+        ];
+        let currentStep = 0; // Start from Step 1 (Index 0)
+
+        function showStep(newStep) {
+            if (newStep < 0 || newStep > steps.length - 1) return;
+
+            // Only allow moving one step forward at a time unless revisiting previous step
+            if (newStep > currentStep + 1) return;
+
+            $(".tab-content > div").hide(); // Hide all step sections
+            $(steps[newStep]).show();       // Show the current step section
+
+            $(".step-header").removeClass("active");
+
+            // Activate headers up to current step
+            for (let i = 0; i <= newStep; i++) {
+                $(stepHeaders[i]).addClass("active");
             }
-    
-            function validateFirstName() {
-                let firstNameInput = $("#GeneralInfoFirstName");
-                let firstNameValue = firstNameInput.val().trim();
-                let errorMessage = $("#firstNameError");
-    
-                if (firstNameValue === "") {
-                    errorMessage.text("First Name is required").show();
-                    firstNameInput.addClass("is-invalid");
-                    return false;
-                }
-    
-                errorMessage.hide();
-                firstNameInput.removeClass("is-invalid");
-                return true;
+            for (let i = newStep + 1; i < stepHeaders.length; i++) {
+                $(stepHeaders[i]).removeClass("active");
             }
-    
-            // ✅ "Next" Button Click
-            $("#nextStep").click(function (e) {
-                e.preventDefault();
-                if (validateFirstName()) {
-                    showStep(1); // Move to RequirementsTab
-                }
-            });
-    
-            // ✅ Prevent Clicking "Requirements" Step If First Name Is Empty
-            $(".step-requirements").click(function (e) {
-                if (!validateFirstName()) {
-                    e.preventDefault(); // Stop click action if validation fails
-                    return;
-                }
-                showStep(1);
-            });
-    
-            // ✅ Backward Navigation
-            $(".step-header").click(function () {
-                let stepIndex = $(".step-header").index(this);
-    
-                if (stepIndex === 1 && !validateFirstName()) {
-                    return;
-                }
-    
-                showStep(stepIndex);
-            });
+
+            currentStep = newStep;
+        }
+
+        function validateFirstName() {
+            let firstNameInput = $("#GeneralInfoFirstName");
+            let firstNameValue = firstNameInput.val().trim();
+            let errorMessage = $("#firstNameError");
+
+            if (firstNameValue === "") {
+                errorMessage.text("First Name is required").show();
+                firstNameInput.addClass("is-invalid");
+                return false;
+            }
+
+            errorMessage.hide();
+            firstNameInput.removeClass("is-invalid");
+            return true;
+        }
+
+        // ✅ Step 1 → Step 2
+        $("#nextStep").click(function (e) {
+            e.preventDefault();
+            if (validateFirstName()) {
+                showStep(1); // Go to RequirementsTab
+            }
         });
-    </script>
+
+        // ✅ Clicking the Requirements step circle
+        $(".step-requirements").click(function (e) {
+            if (!validateFirstName()) {
+                e.preventDefault(); // Prevent advancing if invalid
+                return;
+            }
+            showStep(1);
+        });
+
+        // ✅ Step headers (click navigation)
+        $(".step-header").click(function () {
+            let stepIndex = $(".step-header").index(this);
+            if (stepIndex === 1 && !validateFirstName()) {
+                return;
+            }
+            showStep(stepIndex);
+        });
+
+        // ✅ Step 2 → Step 3
+        $("#InternalInfoTab").click(function (e) {
+            e.preventDefault();
+            showStep(2); // Show InternalInformation
+        });
+
+        // ✅ Step 3 → Step 4
+        $("#WebLoginTab").click(function (e) {
+            e.preventDefault();
+            showStep(3); // Show WebLogin
+        });
+
+        // ✅ Step 4 → Step 5
+        $("#AttachmentsTab").click(function (e) {
+            e.preventDefault();
+            showStep(4); // Show Attachments
+        });
+    });
+</script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             let createAccountRadio = document.getElementById('createAccountRadio');

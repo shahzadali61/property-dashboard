@@ -174,14 +174,14 @@ margin-top: 40px;
         cursor: pointer;
     }
     .step-indicator .step-header .indicator-line {
-        width: 107px;
+        width: 75px;
         height: 2px;
         background: #e4e8ee;
     }
 
 
     .step-indicator .active .indicator-line {
-        width: 107px;
+        width: 75px;
         height: 2px;
         background: rgb(255, 94, 0);
     }
