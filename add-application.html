@@ -840,7 +840,7 @@
                                                             <div class="mt-5">
     
                                                                 <button
-                                                                    class="btn btn-outline-secondary btn-lg mx-1 add-contact-btn">Cancel</button>
+                                                                    class="btn btn-outline-secondary btn-lg mx-1 add-contact-btn">General Info</button>
                                                                 <button id="InternalInfoTab"
                                                                     class="btn btn-primary rounded-2 waves-effect mx-1">Internal
                                                                     Info <i class="ri-arrow-right-circle-line"></i></button>
@@ -1010,8 +1010,8 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-12 text-end  mt-4">
-                                                            <button type="reset"
-                                                                class="btn btn-outline-secondary">Cancel</button>
+                                                           <button id="RequirementsBackBtn" class="btn btn-outline-secondary">Requirements</button>
+
                                                             <button id="WebLoginTab" class="btn btn-primary">Web Login <i
                                                                     class="ri-arrow-right-circle-line"></i></button>
                                                         </div>
@@ -1133,8 +1133,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-10 mx-auto text-end mt-3">
-                                                            <button type="reset"
-                                                                class="btn btn-outline-secondary">Cancel</button>
+                                                           <button id="InternalInfoBackBtn" class="btn btn-outline-secondary">Internal Info</button>
+
                                                             <button id="AttachmentsTab" class="btn btn-primary">Attachments
                                                                 <i class="ri-arrow-right-circle-line"></i></button>
     
@@ -1172,9 +1172,9 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-8 mx-auto text-end mt-4">
-                                                        <button type="reset"
-                                                            class="btn btn-outline-secondary">Cancel</button>
-                                                        <button type="reset" class="btn btn-outline-secondary">Back</button>
+                                                        
+                                                       <button id="WebLoginBackBtn" class="btn btn-outline-secondary">Web Login</button>
+
                                                         <button class="btn btn-primary"><i
                                                                 class="ri-check-double-line"></i>Finish
                                                         </button>
@@ -1211,7 +1211,7 @@
     <script src="assets/vendor/js/bootstrap.js"></script>
     <script src="assets/vendor/js/menu.js"></script>
     <script src="assets/js/main.js"></script>
-   <script>
+  <script>
     $(document).ready(function () {
         let steps = [
             "#PersonalDetailTab",
@@ -1227,20 +1227,17 @@
             ".step-web-login",
             ".step-attachments"
         ];
-        let currentStep = 0; // Start from Step 1 (Index 0)
+        let currentStep = 0;
 
         function showStep(newStep) {
-            if (newStep < 0 || newStep > steps.length - 1) return;
-
-            // Only allow moving one step forward at a time unless revisiting previous step
+            if (newStep < 0 || newStep >= steps.length) return;
             if (newStep > currentStep + 1) return;
 
-            $(".tab-content > div").hide(); // Hide all step sections
-            $(steps[newStep]).show();       // Show the current step section
+            $(".tab-content > div").hide();
+            $(steps[newStep]).show();
 
             $(".step-header").removeClass("active");
 
-            // Activate headers up to current step
             for (let i = 0; i <= newStep; i++) {
                 $(stepHeaders[i]).addClass("active");
             }
@@ -1267,24 +1264,23 @@
             return true;
         }
 
-        // ✅ Step 1 → Step 2
+        // Next to Requirements
         $("#nextStep").click(function (e) {
             e.preventDefault();
             if (validateFirstName()) {
-                showStep(1); // Go to RequirementsTab
+                showStep(1);
             }
         });
 
-        // ✅ Clicking the Requirements step circle
+        // Step header click
         $(".step-requirements").click(function (e) {
             if (!validateFirstName()) {
-                e.preventDefault(); // Prevent advancing if invalid
+                e.preventDefault();
                 return;
             }
             showStep(1);
         });
 
-        // ✅ Step headers (click navigation)
         $(".step-header").click(function () {
             let stepIndex = $(".step-header").index(this);
             if (stepIndex === 1 && !validateFirstName()) {
@@ -1293,25 +1289,48 @@
             showStep(stepIndex);
         });
 
-        // ✅ Step 2 → Step 3
+        // Forward buttons
         $("#InternalInfoTab").click(function (e) {
             e.preventDefault();
-            showStep(2); // Show InternalInformation
+            showStep(2);
         });
 
-        // ✅ Step 3 → Step 4
         $("#WebLoginTab").click(function (e) {
             e.preventDefault();
-            showStep(3); // Show WebLogin
+            showStep(3);
         });
 
-        // ✅ Step 4 → Step 5
         $("#AttachmentsTab").click(function (e) {
             e.preventDefault();
-            showStep(4); // Show Attachments
+            showStep(4);
+        });
+
+        // Backward buttons
+        $(".add-contact-btn").click(function (e) {
+            e.preventDefault();
+            showStep(0); // General Info
+        });
+
+        // Requirements Back
+        $("#RequirementsBackBtn").click(function (e) {
+            e.preventDefault();
+            showStep(1);
+        });
+
+        // Internal Info Back
+        $("#InternalInfoBackBtn").click(function (e) {
+            e.preventDefault();
+            showStep(2);
+        });
+
+        // Web Login Back
+        $("#WebLoginBackBtn").click(function (e) {
+            e.preventDefault();
+            showStep(3);
         });
     });
 </script>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
