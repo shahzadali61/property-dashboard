@@ -1,0 +1,49 @@
+{
+    "lead_source": "add-new-lead-source-ss",
+    "label_id": "17",
+    "assignTo_id": "6",
+    "negotiator_id": "6",
+    "rm_import_value": "ootmm",
+    "zoopla_import_value": "zoopla-import",
+    "market_import_value": "on-the-market"
+}
+{
+    "for": null,
+    "status": null,
+    "areas[]": [
+        "johar-town"
+    ],
+    "lha_dwp": null,
+    "to_date": null,
+    "label_id": null,
+    "max_beds": "2",
+    "max_land": null,
+    "min_beds": "1",
+    "min_land": null,
+    "branch_id": null,
+    "from_date": null,
+    "max_baths": null,
+    "max_space": null,
+    "min_baths": null,
+    "min_space": null,
+    "bym_status": "unsubscribed",
+    "notify_sms": null,
+    "category_id": "2",
+    "lead_source": null,
+    "max_parking": null,
+    "min_parking": null,
+    "notify_post": null,
+    "notify_email": null,
+    "notify_phone": null,
+    "postal_codes[]": [
+        "54000"
+    ],
+    "property_type_id": null,
+    "max_letting_price": null,
+    "min_letting_price": null,
+    "special_feature_id": null,
+    "notify_general_news": null,
+    "notify_special_offers": null,
+    "able_dependant_on_sale": null,
+    "notify_property_alerts": null
+}
